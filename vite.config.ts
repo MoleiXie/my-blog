@@ -12,6 +12,8 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src')
     }
   },
+  
+  base: '/my-blog',   // 配置资源公共基础路径
   build: {
     outDir: 'docs',            // 打包导出目录
     assetsInlineLimit: 4096, // 图片转 base64 编码的阈值
