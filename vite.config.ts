@@ -11,5 +11,9 @@ export default defineConfig({
     alias:{
       '@': path.resolve(__dirname, './src')
     }
+  },
+  build: {
+    outDir: 'docs',            // 打包导出目录
+    assetsInlineLimit: 4096, // 图片转 base64 编码的阈值
   }
 })
