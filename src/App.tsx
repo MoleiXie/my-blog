@@ -1,33 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
+import 'normalize.css'
+import './App.styl'
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <header className="header">
+        <h1 className="logo">Logo</h1>
+        <nav className='nav'>
+          <div className="nav-item">首页</div>
+          <div className="nav-item">关于</div>
+          <div className="nav-item">作品</div>
+          <div className="nav-item">日志</div>
+        </nav>
+      </header>
+      <section className="top-bgImg">
+        <div className="middle-content">
+          <h1 className="top-title">宁静致远.</h1>
+          <div className="green-line"></div>
+          <p className="top-desc">这里是谢微的个人主页</p>
+        </div>
+      </section>
+
     </>
   )
 }
