@@ -1,10 +1,15 @@
 import 'normalize.css'
 import './App.styl'
+import ww from './assets/ww.svg'
+
 function App() {
   return (
     <>
       <header className="header">
-        <h1 className="logo">Logo</h1>
+        <h1 className="logo">
+          <img src={ww} alt="" />
+          <span>Xiewei</span>
+        </h1>
         <nav className='nav'>
           <div className="nav-item">首页</div>
           <div className="nav-item">关于</div>

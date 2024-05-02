@@ -1,24 +1,47 @@
+body{
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* 标准语法 */
+}
+
 .header{
+  box-sizing: border-box
   position absolute
   left: 0
   top: 0
+  padding: 0 180px
   display: flex
-  justify-content: space-evenly
+  justify-content: space-between
   align-items: center
-  height: 80px
+  height: 100px
   width: 100%
   color: white
   .logo{
+    display: flex
+    align-items: center
+    margin 0
+    width 56px
     cursor pointer
+    span{
+      margin-left 12px
+      font-weight: bold;
+      background: -webkit-gradient(130deg, #E5EB5C 40%,#8EEE34 100%);
+      background: linear-gradient(130deg, #E5EB5C 40%,#8EEE34 100%);
+      -webkit-background-clip: text; /* 对于 Safari */
+      background-clip: text;
+      color: transparent; /* 将文字颜色设置为透明 */
+    }
   }
   .nav{
     display: flex
+    gap: 48px
     .nav-item{
-      margin: 0 10px
       padding: 10px 20px
       border-radius: 4px
       transition: .25s
       cursor: pointer
+      font-size: 21px
       background-color: rgba(0,0,0,0)
       &:hover{
         background-color: rgba(0,0,0,.06)
@@ -26,9 +49,9 @@
       &::before{
         content: ''
         position absolute
-        margin-top 22px
+        margin-top 28px
         margin-left 1px
-        width 30px
+        width 40px
         height 3px
         background-color rgb(112, 192, 0)
         opacity 0
@@ -50,12 +73,12 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position center
-  background-image url('@/assets/bg.jpg')
+  background-image url('@/assets/bg2.jpg')
   .middle-content{
     margin 0
     padding: 0
     position absolute
-    top 46.5%
+    top 50%
     left 50%
     transform translate(-50%, -50%)
     width: 100%
