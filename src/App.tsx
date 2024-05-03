@@ -52,10 +52,16 @@ function App() {
               onMouseLeave={setIsEnter}
               style={{ 
                 fontSize: '32px',
-                padding:'10px 20px', 
-                color: isEnter ? 'rgb(112, 192, 0)' : '#000'
-                
+                padding:'10px 20px',
+                marginRight: '36px',
+                color: isEnter ? 'rgb(112, 192, 0)' : '#fff'
               }} />
+          </div>
+          <div className="content-list">
+            <div className="content-item">首页</div>
+            <div className="content-item">关于</div>
+            <div className="content-item">作品</div>
+            <div className="content-item">日志</div>
           </div>
         </div>
       </section>

@@ -133,7 +133,6 @@ body{
   .right-content{
     opacity 0
     box-sizing: border-box
-    padding-right: 36px
     position fixed
     top 0
     right -270px
@@ -150,6 +149,20 @@ body{
       width 100%
       border-radius: 4px;
       line-height: 100px
+    }
+    .content-list{
+      padding: 0 16px
+      .content-item{
+        margin-bottom 12px
+        padding: 18px 28px
+        font-size: 21px  
+        transition: .25s
+        border-radius: 6px
+        color: rgba(255,255,255,.8)
+        &:hover{
+          background-color rgba(0,0, 0,.1);
+        }
+      }
     }
   }
 }
@@ -177,6 +190,18 @@ body{
       .nav-item{
         padding: 10px 12px
         font-size: 16px
+        &::before{
+          content: ''
+          position absolute
+          margin-top: 22px;
+          margin-left: -1px;
+          width: 34px;
+          height 3px
+          background-color rgb(112, 192, 0)
+          opacity 0
+          transform: scale(0)
+          transition: .25s
+        }
       }
     }
   }
