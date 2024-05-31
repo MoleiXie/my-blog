@@ -10,8 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@ant-design/icons": "^5.3.6",
+    "@ant-design/icons": "^5.3.7",
     "@types/node": "^20.12.7",
+    "animate.css": "^4.1.1",
     "antd": "^5.16.5",
     "classNames": "npm:classnames@^2.5.1",
     "normalize.css": "^8.0.1",
