@@ -1,19 +1,22 @@
-import './App.styl'
 
-<<<<<<< HEAD
-import { useNavCollapse, useToggle } from './hooks';
+// 第三方包
 import classNames from 'classnames';
-import ww from './assets/ww.svg'
-import { MenuOutlined, DownOutlined } from '@ant-design/icons'
-=======
-// 模块划分
-import Home from '@/pages/home/home'
->>>>>>> 0ad574db8ff62882ba85460bdc5d51ad351775ca
+import { DownOutlined, MenuOutlined } from '@ant-design/icons';
 
-function App() {
+// 本地资源
+import { useNavCollapse, useToggle } from '@/hooks';
+import ww from '@/assets/ww.svg'
+import './home.styl'
+
+
+function Home() {
+  const { isCollapse } = useNavCollapse(768);
+
+  const [visible, setVisible] = useToggle(false)
+
+  const [isEnter, setIsEnter] = useToggle(false)
   return (
     <>
-<<<<<<< HEAD
       <header className="header">
         <h1 className="logo">
           <img src={ww} alt="" />
@@ -40,8 +43,8 @@ function App() {
           <div className="green-line"></div>
           <p className="top-desc">这里是谢微的个人主页</p>
         </div>
-        <div className="toDown">
-          <DownOutlined style={{fontSize: '32px'}}/>
+        <div className="footer-icon myAni-bounce">
+          <DownOutlined/>
         </div>
       </section>
       <section className={classNames("sidebar",visible && 'sidebar-enter')}>
@@ -67,12 +70,8 @@ function App() {
           </div>
         </div>
       </section>
-      
-=======
-      <Home/>
->>>>>>> 0ad574db8ff62882ba85460bdc5d51ad351775ca
     </>
   )
 }
 
-export default App
+export default Home
