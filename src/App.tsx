@@ -5,7 +5,7 @@ import './App.styl'
 import { useNavCollapse, useToggle } from './hooks';
 import classNames from 'classnames';
 import ww from './assets/ww.svg'
-import { MenuOutlined } from '@ant-design/icons'
+import { MenuOutlined, DownOutlined } from '@ant-design/icons'
 
 function App() {
   const { isCollapse } = useNavCollapse(768);
@@ -41,6 +41,9 @@ function App() {
           <div className="green-line"></div>
           <p className="top-desc">这里是谢微的个人主页</p>
         </div>
+        <div className="toDown">
+          <DownOutlined style={{fontSize: '32px'}}/>
+        </div>
       </section>
       <section className={classNames("sidebar",visible && 'sidebar-enter')}>
         <div className="left-mask"></div>
@@ -65,6 +68,7 @@ function App() {
           </div>
         </div>
       </section>
+      
     </>
   )
 }

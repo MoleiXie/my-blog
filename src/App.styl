@@ -112,6 +112,31 @@ body{
       background-color rgb(112, 192, 0);
     }
   }
+  .toDown{
+    position absolute
+    left: 50%
+    bottom 4%
+    transform translateX(-50%)
+    width 32px
+    height 32px
+    color: rgba(255,255,255,.4)
+    transition: .3s
+    &:hover{
+      color: rgba(255,255,255,.8)
+      animation: toDown 1s infinite;
+    }
+    @keyframes toDown{
+      0%{
+        transform: translate(-50%,0)
+      }
+      50%{
+        transform: translate(-50%,10px)
+      }
+      100%{
+        transform: translate(-50%,0)
+      }
+    }
+  }
 }
 .sidebar{
   --siderbar-width: 270px;
@@ -235,3 +260,4 @@ body{
     }
   }
 }
+
